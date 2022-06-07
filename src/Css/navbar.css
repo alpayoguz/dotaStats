@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "joan";
+  src: url("../Fonts/Joan/Joan-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar__content {
+  font-family: "joan";
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo_img {
+  width: 200px;
+  min-width: 200px;
+  height: 50px;
+  min-height: 50px;
+  background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_horiz.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.8;
+  margin-right: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.logo_img:hover {
+  opacity: 1;
+}
+.navbar__items {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+.navbar__item {
+  font-size: 25px;
+  color: #cccccc;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  list-style-type: none;
+}
+.navbar__item:hover {
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .logo_img {
+    width: 50px;
+    height: 50px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .navbar__item{
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 768px){
+    .logo_img{
+        display: none;
+    }
+    .navbar__item{
+        font-size: 10px;
+    }
+}

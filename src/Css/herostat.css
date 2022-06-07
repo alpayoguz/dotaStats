@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "noto-sans";
+  src: url("../Fonts/Noto_Sans/NotoSans-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.herostat__main {
+  padding: 100px 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.herostat__left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.herostat__header {
+  display: flex;
+  flex-direction: column;
+}
+.herostat_stats {
+  margin-top: 2rem;
+  font-family: "noto-sans";
+  min-height: 221px;
+  background: linear-gradient(80deg, #252728 0%, #54545400 100%);
+  border-top: 2px solid #282828;
+  border-bottom: 2px solid #2c2e2e;
+  box-shadow: 0px 0px 8px #000;
+
+  z-index: 2;
+}
+.herostats__stats__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
+  padding: 20px 0;
+}
+.stats__attributes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+}
+.stats__attributes__inner {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  flex-grow: 1;
+}
+.header__primary {
+  display: flex;
+  align-items: center;
+}
+
+.header__primary > * {
+  color: #fff;
+  margin-left: 5px;
+  font-family: "noto-sans";
+  font-size: 24px;
+}
+.header__name {
+  font-size: 60px;
+  line-height: 62px;
+  margin-top: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.herostat__video {
+  width: 500px;
+  height: 500px;
+}
+.herostat__video_content {
+  width: 500px;
+  height: 500px;
+}
+.attr__img__container {
+  width: 150px;
+  height: 84px;
+}
+.attr__img {
+  width: 150px;
+  height: 84px;
+}
+.attr_icon {
+  width: 30px;
+  height: 30px;
+}
+.attr__name {
+  color: #969696;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px #000;
+  margin-top: 12px;
+}
+.portrait__healthbar {
+  width: 150px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #286323, #7af03c);
+  position: relative;
+}
+.healthbar_health {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  position: absolute;
+}
+.healthbar_regen {
+  font-size: 10px;
+  color: #286323;
+  text-align: right;
+  flex-grow: 1;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.portrait__manabar {
+  width: 150px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #1056db, #73f5fe);
+  position: relative;
+}
+.manabar_mana {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  position: absolute;
+}
+.manabar_regen {
+  font-size: 10px;
+  color: #286323;
+  text-align: right;
+  flex-grow: 1;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.attr__nums {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 10px;
+}
+.attr__nums__str {
+  display: flex;
+  padding: 5px 0;
+}
+.attr_nums_base {
+  color: #fff;
+  font-family: Reaver, serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #000;
+  margin-left: 12px;
+}
+.attr_nums_inc {
+  color: #999;
+  height: 20px;
+  font-size: 13px;
+  text-shadow: 1px 1px 2px #000;
+  margin-left: 8px;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.stats__roles {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-content: start;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  width: 300px;
+}
+.stats__pros{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.element_title{
+  color: #969696;
+}
+.element_val{
+  color: #fff;
+}
+.stats__pros > * {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shadow_text {
+  text-shadow: #fff 0px 0px 10px, #fff 0px 0px 5px, #fff 0px 0px 15px,
+    #fff 0px 0px 10px, #fff 0px 0px 15px, #fff 0px 0px 40px,
+    #fff 0px 0px 25px, #fff 0px 0px 45px;
+}
+.roles__role {
+  height: 32px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 3px;
+}
