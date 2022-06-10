@@ -6,7 +6,7 @@ import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { HeroProvider } from "./Contexts/HeroesContext";
 import Home from "./Pages/Home";
 import Heroes from "./Pages/Heroes";
-import HeroStat from "./Pages/HeroStat";
+import Hero from "./Pages/Hero";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="heroes" element={<Heroes />} />
-        <Route path="/hero/:heroname" element={<HeroStat />} />
+        <Route path="/hero/:heroname" element={<Hero />} />
       </Routes>
     </HeroProvider>
   </BrowserRouter>

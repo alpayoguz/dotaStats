@@ -12,7 +12,7 @@ const Hero = ({ heroImg, heroName, heroId }) => {
     .replace(/ /g, "");
 
   return (
-    <Link to={`../hero/${currentHeroName}`} state={currentHero}>
+    <Link className="hero_link" to={`../hero/${currentHeroName}`} state={currentHero}>
       <div className="img__container">
         <img
           className="hero__img"

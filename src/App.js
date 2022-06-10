@@ -1,11 +1,10 @@
 import Heroes from "./Pages/Heroes";
-import HeroStat from "./Pages/HeroStat";
+import Hero from "./Pages/Hero";
 
 function App() {
   return (
     <>
-      {/* <Heroes /> */}
-      <HeroStat/>
+      <Hero/>
       <Heroes/>
     </>
   );

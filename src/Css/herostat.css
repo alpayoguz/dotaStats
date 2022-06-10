@@ -9,14 +9,12 @@
 }
 
 .herostat__main {
-  padding: 100px 100px;
-  display: flex;
-  justify-content: space-between;
 }
 .herostat__left {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 20px;
 }
 .herostat__header {
   display: flex;
@@ -25,7 +23,7 @@
 .herostat_stats {
   margin-top: 2rem;
   font-family: "noto-sans";
-  min-height: 221px;
+
   background: linear-gradient(80deg, #252728 0%, #54545400 100%);
   border-top: 2px solid #282828;
   border-bottom: 2px solid #2c2e2e;
@@ -34,50 +32,37 @@
   z-index: 2;
 }
 .herostats__stats__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   max-width: 1500px;
-  padding: 20px 0;
+  padding: 2rem 0;
+  margin: auto;
 }
 .stats__attributes {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 15px;
+  max-width: 100%;
+  justify-content: space-between;
 }
 .stats__attributes__inner {
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  flex-grow: 1;
 }
-.header__primary {
-  display: flex;
-  align-items: center;
+.stats__attr__portrait {
+  border: 2px solid #f9f9f9;
+  border-radius: 4px;
 }
 
-.header__primary > * {
-  color: #fff;
-  margin-left: 5px;
-  font-family: "noto-sans";
-  font-size: 24px;
-}
-.header__name {
-  font-size: 60px;
-  line-height: 62px;
-  margin-top: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-}
-.herostat__video {
-  width: 500px;
-  height: 500px;
+.herostat__video__container {
+  position: relative;
 }
 .herostat__video_content {
-  width: 500px;
-  height: 500px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  right: 1%;
+  top: 50%;
 }
 .attr__img__container {
   width: 150px;
@@ -99,7 +84,7 @@
   text-shadow: 1px 1px 2px #000;
   margin-top: 12px;
 }
-.portrait__healthbar {
+.portrait_bar {
   width: 150px;
   height: 22px;
   display: flex;
@@ -180,41 +165,315 @@
 .stats__roles {
   color: #fff;
   width: 100%;
-  display: flex;
-  align-content: start;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 40px;
-  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 3px;
 }
-.stats__pros{
-  flex-grow: 1;
+.stats__pros {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.element_title{
-  color: #969696;
+.stats__pros__inner{
+  display: flex;
+
 }
-.element_val{
-  color: #fff;
+.element_title {
+  color: #f9f9f9;
+  font-size: 20px;
+  font-weight:500
 }
-.stats__pros > * {
-  padding: 0 2rem;
+.element_val {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  margin-top: 10px;
+}
+.pros__element {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+ 
 }
 .shadow_text {
   text-shadow: #fff 0px 0px 10px, #fff 0px 0px 5px, #fff 0px 0px 15px,
-    #fff 0px 0px 10px, #fff 0px 0px 15px, #fff 0px 0px 40px,
-    #fff 0px 0px 25px, #fff 0px 0px 45px;
+    #fff 0px 0px 10px, #fff 0px 0px 15px, #fff 0px 0px 40px, #fff 0px 0px 25px,
+    #fff 0px 0px 45px;
 }
 .roles__role {
-  height: 32px;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 3px;
+  font-size: 1rem;
+}
+.horizontal__seperator1 {
+  display: none;
+}
+.horizontal__seperator2 {
+  display: none;
+}
+.pros_icon_container{
+  
+}
+.attr__name{
+  grid-column: 2 / 1 span;
+  letter-spacing: 5px;
+}
+
+/* Media Queries */
+@media(min-width:1200px){
+  .pros__element{
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 768.20px) and (max-width:1198.98px) {
+   .element_title{
+     font-size: 13px;
+     
+   }
+   .pros_icon{
+     width: 18px;
+     height: 18px;
+   }
+   .stats__pros{
+     justify-content: space-around;
+   }
+   .element_val{
+     font-size: 11px;
+   }
+   .attr__name{
+     grid-column: 2 / 1 span;
+     letter-spacing: 5px;
+   }
+   .pros__element{
+     margin-right: 20px;
+   }
+}
+@media (max-width: 768px) {
+  .element_title {
+    font-size: 15px;
+  }
+  .element_val {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+  }
+  .roles__role {
+    font-size: 0.7rem;
+  }
+  .herostats__stats__inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .stats__attributes {
+    padding-bottom: 5px;
+    align-items: center;
+    margin-left: 7px;
+  }
+
+  .stats__attributes__inner {
+    margin-left: 5px;
+    justify-content: center;
+  }
+  .stats__attr__portrait {
+    width: 50%;
+  }
+  .attr__img__container {
+    width: 100%;
+  }
+  .attr__img {
+    width: 100%;
+  }
+  .portrait_bar {
+    width: 100%;
+  }
+  .portrait__manabar {
+    width: 100%;
+  }
+  .attr__name {
+    display: none;
+  }
+  .attr__nums {
+    padding: 0 5px;
+  }
+  .attr_icon {
+    width: 30%;
+  }
+  .attr_nums_base {
+    font-size: 14px;
+  }
+  .attr__nums__str {
+    align-items: center;
+  }
+  .attr_nums_inc {
+    font-size: 11px;
+  }
+  .horizontal__seperator1 {
+    display: block;
+    width: 80%;
+    margin-top: 10px;
+    
+  }
+  .horizontal__seperator2 {
+    display: block;
+    grid-column: 1 / span 3;
+    width: 80%;
+  }
+  .stats__pros {
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .herostat__video_content {
+    top: 6%;
+    right: 5%;
+    max-height: 50%;
+    width: 40%;
+  }
+}
+@media (min-width: 320.2px) and (max-width: 768px) {
+  .herostat__video_content {
+    max-height: 300px;
+    height: 30%;
+  }
+  .header__name {
+    font-size: 25px;
+    position: relative;
+    z-index: 3;
+  }
+  .healthbar_health {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+  .manabar_mana {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+  .attr__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .pros_icon_container{
+    margin-top: 2px;
+    margin-right: 3px;
+  }
+  .pros_icon{
+    width: 20px;
+    height: 20px;
+  }
+  .element_val{
+    font-size: 12px;
+    align-items: center;
+  }
+  .stats__pros {
+    display: block;
+    margin-top: 10px;
+  }
+  .stats__pros__inner{
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 320px) {
+  .element_title {
+    font-size: 15px;
+  }
+  .element_val {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+  }
+  .roles__role {
+    font-size: 0.7rem;
+  }
+  .herostats__stats__inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .stats__attributes {
+    padding-bottom: 5px;
+  }
+
+  .stats__attributes__inner {
+    margin-left: 5px;
+    justify-content: center;
+  }
+  .stats__attr__portrait {
+    width: 50%;
+  }
+  .attr__img__container {
+    width: 100%;
+  }
+  .attr__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .portrait_bar {
+    width: 100%;
+  }
+  .portrait__manabar {
+    width: 100%;
+  }
+  .attr__name {
+    display: none;
+  }
+  .attr__nums {
+    padding: 0 5px;
+  }
+  .attr_icon {
+    width: 30%;
+  }
+  .attr_nums_base {
+    font-size: 14px;
+  }
+  .attr__nums__str {
+    align-items: center;
+  }
+  .attr_nums_inc {
+    font-size: 11px;
+  }
+  .horizontal__seperator1 {
+    display: block;
+    width: 80%;
+    margin-top: 10px;
+    
+  }
+  .horizontal__seperator2 {
+    display: block;
+    grid-column: 1 / span 3;
+    width: 80%;
+  }
+  .stats__pros {
+    display: block;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .stats__pros__inner{
+    justify-content: space-around;
+  }
+  .herostat__video_content {
+    top: -5%;
+    right: 5%;
+  }
+  .healthbar_health {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+  .manabar_mana {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+  .pros_icon_container{
+    margin-top: 2px;
+    margin-right: 3px;
+  }
+  .pros_icon{
+    width: 12px;
+    height: 12px;
+
+    
+  }
 }
