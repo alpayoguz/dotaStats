@@ -15,9 +15,10 @@
   border-right: 1px solid black;
 }
 .img__container:hover {
+  position: relative;
   transform: scale(1.2);
   transition: all ease 300ms;
-  z-index: 50;
+  z-index: 5;
   box-shadow: 24px 5px 29px -1px rgba(0, 0, 0, 0.91);
   -webkit-box-shadow: 24px 5px 29px -1px rgba(0, 0, 0, 0.91);
   -moz-box-shadow: 24px 5px 29px -1px rgba(0, 0, 0, 0.91);

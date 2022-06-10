@@ -1,7 +1,11 @@
+// react and react-router library
 import React from "react";
 import { Link } from "react-router-dom";
+//context
 import { useHero } from "../Contexts/HeroesContext";
+// css
 import "../Css/hero.css";
+// constants
 import imageBaseURL from "../Constants/imageBaseURL";
 
 const Hero = ({ heroImg, heroName, heroId }) => {

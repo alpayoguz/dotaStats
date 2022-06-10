@@ -57,8 +57,19 @@
     transition-duration: .1s;
     cursor: pointer;
     color: #fff;
-    filter: brightness(0.5) saturate(0)
+    filter: brightness(0.5) saturate(0);
+   
+    
+    
 }
+.filter_atts_img:hover{
+    filter: brightness(1); 
+}
+.filter_active{
+    filter: brightness(1) saturate(1); 
+    transition: all ease-in-out 10ms;
+}
+
 .filter_input_icon{
     color: #cccccc47;
 }

@@ -8,19 +8,14 @@ export const useHero = () =>{
 
 export const HeroProvider = ({children}) =>{
     const [heroes, setHeroes] = useState();
-    useEffect(()=>{
-        axios.get("https://api.opendota.com/api/heroes")
-        .then(response=>{
-            setHeroes(response.data)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-    },[])
+    const[filteredHeroes, setFilteredHeroes] = useState() ;
+
 
     const value = {
         heroes,
-        setHeroes
+        setHeroes,
+        filteredHeroes,
+        setFilteredHeroes,   
     }
 
     return(

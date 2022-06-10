@@ -1,10 +1,15 @@
+//  react library hooks
 import React, { useRef, useEffect } from "react";
+//  component
 import HeroHeader from "./HeroHeader";
+//  for images and icons
 import imageBaseURL, { videoBaseURL } from "../Constants/imageBaseURL";
 import { attr_images } from "../Constants/Attributes";
+// for  static hero roles and attributes
 import allRoles from "../Constants/Roles";
-import "../Css/herostat.css";
 import { pros_icons } from "../Constants/Attributes";
+// css
+import "../Css/herostat.css";
 
 
 const HeroStatt = ({ currentHero }) => {

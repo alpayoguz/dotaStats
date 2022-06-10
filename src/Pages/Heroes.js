@@ -1,18 +1,24 @@
+// react library
 import React, { useEffect, useState } from "react";
-import Hero from "../Components/Hero";
+// css
 import "../Css/heroes.css";
+// axios 
 import axios from "axios";
+//components
+import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import Background from "../Components/Background";
 import Header from "../Components/Header";
-import { useHero } from "../Contexts/HeroesContext";
 import HeroFilter from "../Components/HeroFilter";
+// context
+import { useHero } from "../Contexts/HeroesContext";
 
 const Heroes = () => {
-  const { heroes, setHeroes } = useHero();
-
+  const { heroes, setHeroes, filteredHeroes, setFilteredHeroes, deneme } = useHero();
+  // fetch from api
   useEffect(() => {
     axios.get("https://api.opendota.com/api/heroStats").then((response) => {
+      setFilteredHeroes(response.data)
       setHeroes(response.data);
     })
     .catch(error => console.log(error))
@@ -27,7 +33,7 @@ const Heroes = () => {
             <Header text="Pick Your Hero" cls="heroes__header" />
             <HeroFilter/>
             <div className="heroes__container">
-              {heroes?.map((hero) => {
+              {filteredHeroes?.map((hero) => {
                 return (
                   
                     <Hero
