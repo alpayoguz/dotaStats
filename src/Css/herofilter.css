@@ -15,6 +15,9 @@
    margin: auto;
    min-height: 80px;
    margin-bottom: 20px;
+   animation-name: opacityChanger;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
 
 }
 .filter_input_container{
@@ -74,9 +77,17 @@
     color: #cccccc47;
 }
 
-/* MEDIA QUERIES */
 
+/* Keyframes */
+@keyframes opacityChanger{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
 
+/* Media Queries */
 
 
 @media(max-width:768px){

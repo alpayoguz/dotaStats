@@ -6,6 +6,7 @@
   font-family: "joan";
   src: url("../Fonts/Joan/Joan-Regular.ttf");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 .heroes__header {
   font-family: "joan";
@@ -40,6 +42,9 @@
   color: white;
   cursor: default;
   margin-bottom: 20px;
+  animation-name: opacityChanger;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 /* Media Queries */
@@ -66,5 +71,15 @@
     }
     .heroes__container {
       justify-content: space-around;
+    }
+  }
+
+  /* Keyframes */
+
+  @keyframes opacityChanger{
+    0%{
+      opacity: 0;
+    }100%{
+      opacity: 1;
     }
   }

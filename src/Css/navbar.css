@@ -28,6 +28,9 @@
   margin-right: 40px;
   margin-left: 10px;
   cursor: pointer;
+  animation-name:opacityChanger ;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
 }
 .logo_img:hover {
   opacity: 1;
@@ -47,6 +50,51 @@
 }
 .navbar__item:hover {
   color: #fff;
+}
+li:first-child{
+  animation-name: leftToRight;
+  animation-duration: 600ms;
+  animation-timing-function: ease-out;
+}
+li:nth-child(2){
+  animation-name: topToBottom;
+  animation-duration: 600ms;
+  animation-timing-function: ease-out;
+}
+li:last-child{
+  animation-name: rightToLeft;
+  animation-duration: 600ms;
+  animation-timing-function: ease-out;
+}
+/* Key Frames */
+@keyframes leftToRight{
+  0%{
+    transform: translateX(-1000%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes rightToLeft{
+  0%{
+    transform: translateX(1000%);
+  }100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes topToBottom{
+  0%{
+    transform: translateY(1000%);
+  }100%{
+    transform: translateY(0%);
+  }
+}
+@keyframes opacityChanger{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
 }
 
 /* Media Queries */
