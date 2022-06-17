@@ -8,20 +8,20 @@ const Navbar = () => {
       <div className="navbar__content">
         <a className="logo_img"></a>
         <ul className="navbar__items">
-          <li>
-            <Link className="navbar__item" to={`/`}>
+          <li className="navbar__item">
+            <Link className="navbar__link" to={`/`}>
               HOME
             </Link>
           </li>
-          <li>
+          <li className="navbar__item">
             {" "}
-            <Link className="navbar__item" to={`/heroes`}>
+            <Link className="navbar__link" to={`/heroes`}>
               HEROES
             </Link>
           </li>
-          <li>
-            <Link className="navbar__item" to={`/heroes`}>
-              SEARCH PLAYER
+          <li className="navbar__item">
+            <Link className="navbar__link" to={`/teams`}>
+              TEAMS
             </Link>
           </li>
         </ul>

@@ -7,16 +7,21 @@ import { HeroProvider } from "./Contexts/HeroesContext";
 import Home from "./Pages/Home";
 import Heroes from "./Pages/Heroes";
 import Hero from "./Pages/Hero";
+import Teams from "./Pages/Teams";
+import { TeamProvider } from "./Contexts/TeamsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <HeroProvider>
-      <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="heroes" element={<Heroes />} />
-        <Route path="/hero/:heroname" element={<Hero />} />
-      </Routes>
-    </HeroProvider>
+    <TeamProvider>   
+      <HeroProvider>
+        <Routes>
+          <Route path="" element={<Home />} />
+          <Route path="heroes" element={<Heroes />} />
+          <Route path="teams" element={<Teams />} />
+          <Route path="/hero/:heroname" element={<Hero />} />
+        </Routes>
+      </HeroProvider>
+    </TeamProvider>
   </BrowserRouter>
 );

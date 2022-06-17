@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "open-sans";
+    src: url("../Fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+.chart{
+    max-width: 1600px;
+    width: 70%;
+    margin: auto;
+   padding: 30px 0px;
+}
+.chart__inner{
+    position: relative;
+}
+.circular_progress{
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    width: 75px;
+}
+.chart__list{
+    list-style-type: none;
+}
+.chart__listItem{
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+    min-height: 25px;
+    border: 1px solid;
+    font-family: "open-sans";
+    list-style-type: none;
+    cursor: pointer;
+    
+}
+.chart__listItem:hover{
+    background-color: #ab8569;
+}
+.chart__listItem:nth-child(odd){
+    background-color: #2c2e2e;
+}
+.chart__listItem:nth-child(odd):hover{
+    background-color: #2c2e2e;
+    background-color: #ab8569;
+
+}
+.chart__icon{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    padding-top: 7px;
+    margin-left: 5px;
+}
+.chart__span{
+    min-width: 14px;
+    display: inline-block;
+    padding-bottom: 6px;
+    padding-left: 7px;
+}
+.chart__rating{
+    position: absolute;
+    right: 10px;
+    top: 6.5px;
+}
+
+
+/* TeamMembers.jsx */
+
+.teammembers__list{
+    list-style-type: none;
+    padding: 5px 20px;
+}
+.teammembers__item:first-child{
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    color: rgb(15, 233, 58);
+}
+.teammembers__item{
+    
+    margin-bottom: 2px;
+}
+.empty__team{
+    margin-top: 10px;
+}
+
+@media (max-width:480px){
+    .chart{
+        width: 90%;
+        padding: 10px 0px 20px 0px;
+    }
+    .chart__listItem{
+        font-size: 12px;
+    }
+}
