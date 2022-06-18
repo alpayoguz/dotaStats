@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { teamsBaseURL } from "../Constants/imageBaseURL";
-import axios from "axios";
+import React from "react";
 import "../Css/Chart.css";
+import { CSSTransition } from "react-transition-group";
 
-const TeamMembers = ({teamMems}) => {
-  const [teamMembers, setTeamMembers] = useState();
-
-
+const TeamMembers = ({ teamMems, isTeamMembersDisplayed }) => {
+  console.log(isTeamMembersDisplayed);
   return (
-    <ul className="teammembers__list">
-        <li className="teammembers__item">Active Players </li>
-      {teamMems.length > 0 ? teamMems?.map((teamMember) => (
-        <li className="teammembers__item">{teamMember.name}</li>
-      )) : <div className="empty__team">-No Active Players-</div>}
+    <ul
+      className={`teammembers__list ${
+        isTeamMembersDisplayed ? "teammembers-expand" : "teammembers-hidden"
+      }`}
+    >
+      <li className="teammembers__item">Active Players </li>
+      {teamMems.length > 0 ? (
+        teamMems?.map((teamMember) => (
+          <li className="teammembers__item">{teamMember.name}</li>
+        ))
+      ) : (
+        <div className="empty__team">-No Active Players-</div>
+      )}
     </ul>
   );
 };

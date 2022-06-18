@@ -47,7 +47,7 @@
   animation-timing-function: ease-in-out;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
 
 @media(min-width:768.2px) and (max-width:1024px){
     .heroes__container {
@@ -74,7 +74,7 @@
     }
   }
 
-  /* Keyframes */
+  /* KEYFRAMES */
 
   @keyframes opacityChanger{
     0%{

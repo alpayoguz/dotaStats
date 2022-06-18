@@ -26,7 +26,7 @@ const Chart = () => {
         ) : (
           <ul className="chart__list">
             {teams?.map((team, index) => (
-                <ChartRow team={team} key={index + 1} index={index}/>
+                <ChartRow  team={team} key={index + 1} index={index}/>
             ))}
           </ul>
         )}
