@@ -6,16 +6,11 @@ const Navbar = () => {
   return (
     <div className="navbar__main">
       <div className="navbar__content">
-        <a className="logo_img"></a>
+        <Link to={`/`} className="logo_img"></Link>
         <ul className="navbar__items">
           <li className="navbar__item">
-            <Link className="navbar__link" to={`/`}>
-              HOME
-            </Link>
-          </li>
-          <li className="navbar__item">
             {" "}
-            <Link className="navbar__link" to={`/heroes`}>
+            <Link className="navbar__link" to={`/`}>
               HEROES
             </Link>
           </li>

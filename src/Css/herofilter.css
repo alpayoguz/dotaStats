@@ -45,6 +45,7 @@
 .filter_atts_title{
     color: #808fa6;
     font-family: "noto-sans";
+    margin-right: 10px;
 
 }
 
@@ -75,6 +76,7 @@
 
 .filter_input_icon{
     color: #cccccc47;
+    margin-left: 5px;
 }
 
 

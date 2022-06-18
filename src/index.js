@@ -4,7 +4,6 @@ import "./Css/index.css";
 import App from "./App";
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { HeroProvider } from "./Contexts/HeroesContext";
-import Home from "./Pages/Home";
 import Heroes from "./Pages/Heroes";
 import Hero from "./Pages/Hero";
 import Teams from "./Pages/Teams";
@@ -16,8 +15,8 @@ root.render(
     <TeamProvider>   
       <HeroProvider>
         <Routes>
-          <Route path="" element={<Home />} />
-          <Route path="heroes" element={<Heroes />} />
+         
+          <Route path="" element={<Heroes />} />
           <Route path="teams" element={<Teams />} />
           <Route path="/hero/:heroname" element={<Hero />} />
         </Routes>
