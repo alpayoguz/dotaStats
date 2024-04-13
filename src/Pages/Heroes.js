@@ -12,6 +12,8 @@ import Header from "../Components/Header";
 import HeroFilter from "../Components/HeroFilter";
 // context
 import { useHero } from "../Contexts/HeroesContext";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Opacity } from "@mui/icons-material";
 
 
 
@@ -24,6 +26,7 @@ const Heroes = () => {
     const options = {game_mode: 1}
   // fetch from api
   useEffect(() => {
+    document.title = "Dota 2 Heroes";
     axios
       .get("https://api.opendota.com/api/heroStats")
       .then((response) => {
@@ -36,10 +39,15 @@ const Heroes = () => {
 
   return (
     <>
+      <HelmetProvider>
+      <Helmet>
+        <meta name="description" content="Dota 2 Heroes"></meta>
+      </Helmet>
       <Background>
         <Navbar />
         <div>
           <div className="page__container">
+            <h1 style={{opacity:0}}>Dota 2 Heroes</h1>
             <Header text="Pick Your Hero" cls="heroes__header" />
             <HeroFilter />
             <div className="heroes__container">
@@ -57,6 +65,7 @@ const Heroes = () => {
           </div>
         </div>
       </Background>
+      </HelmetProvider> 
     </>
   );
 };

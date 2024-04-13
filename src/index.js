@@ -15,7 +15,6 @@ root.render(
     <TeamProvider>   
       <HeroProvider>
         <Routes>
-         
           <Route path="" element={<Heroes />} />
           <Route path="teams" element={<Teams />} />
           <Route path="/hero/:heroname" element={<Hero />} />

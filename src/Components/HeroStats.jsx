@@ -39,7 +39,6 @@ const HeroStatt = ({ currentHero }) => {
     roles,
     img,
   } = currentHero;
-  console.log(currentHero);
 
   const {
     icon_armor,
@@ -51,7 +50,6 @@ const HeroStatt = ({ currentHero }) => {
     icon_projectile_speed,
     icon_vision,
   } = pros_icons;
-  console.log(icon_vision);
   
   
   const videoName = name.substring(14);

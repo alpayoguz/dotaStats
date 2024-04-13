@@ -5,19 +5,22 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    
-   
-    
-   
-    <title>Dota Stats</title>
+    <meta name="description" content="Dota 2 Heroes and Teams Information"/>
+    <meta name="keywords" content="Dota 2, Dota2, Dota2 Heroes, Dota 2 Teams, Dota2 Teams" />
+    <title>Dota 2</title>
+    <script>
+    // not work for in capitalize.js Why ???
+    Object.defineProperty(String.prototype, 'capitalize', {
+    value: function() {
+      return this.charAt(0).toUpperCase() + this.slice(1);
+    },
+    enumerable: false
+  });
+  
+    </script>
   </head>
   <body>
 
     <div id="root"></div>
-
   </body>
 </html>

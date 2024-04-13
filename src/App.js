@@ -1,12 +1,8 @@
-import Heroes from "./Pages/Heroes";
-import Hero from "./Pages/Hero";
-
+import { HelmetProvider } from 'react-helmet-async';
 function App() {
   return (
-    <>
-      <Hero/>
-      <Heroes/>
-    </>
+  <></>
+     
   );
 }
 
